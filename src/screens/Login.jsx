@@ -38,7 +38,7 @@ const Login = () => {
         <Button width={"100%"}marginBottom={'1rem'} colorScheme="teal" size="lg" onClick={handleSubmit}>
           Login
         </Button>
-        Don't have an account?
+        Dont have an account?
         <Link href="/signup" color={"teal"} marginLeft={"10px"}>
           Signup
           </Link>

@@ -36,7 +36,7 @@ const Dashboard = () => {
 
     useEffect (()=>{
       readData()
-    },[ handleDelete])
+    },[])
 
 
 
@@ -64,7 +64,7 @@ const Dashboard = () => {
         </GridItem>
         <GridItem pl="2" area={"main"} p={10} >
           {blogData?.map((e)=>{
-            return   <BlogCard  title={e.title}  description={e.description} id={e.id} deleteItem={handleDelete} setOpen={setOpen} edit={setEditBlogData}/>
+            return   <BlogCard key={e.id} title={e.title}  description={e.description} id={e.id} deleteItem={handleDelete} setOpen={setOpen} edit={setEditBlogData}/>
           })}
         </GridItem>
       </Grid>

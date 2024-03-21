@@ -63,7 +63,7 @@ useEffect(()=>{
     setTitle(edit?.title);
     setDescription(edit?.description);
   }
-},[])
+},[edit])
 
   return (
 
