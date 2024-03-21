@@ -1,4 +1,5 @@
 'use client'
+
 import { Signup } from '@/screens'
 
 const SignupPage = () => {

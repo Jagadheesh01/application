@@ -1,12 +1,10 @@
-import { Signup } from "@/screens";
-import Login from "@/screens/Login";
-import Image from "next/image";
+import { Dashboard } from "@/screens";
+
 
 export default function Home() {
   return (
     <>
-    <Login />
-    <Signup />
+    <Dashboard />
     </>
   );
 }

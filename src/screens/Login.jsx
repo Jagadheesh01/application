@@ -1,6 +1,30 @@
+'use client'
+import { loginUser } from '@/services';
+import { sendNotification } from '@/utils/notification';
 import { Button, Card, FormControl, FormLabel, Input, Text, VStack ,Link} from '@chakra-ui/react';
+import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 
 const Login = () => {
+  const router = useRouter()
+
+  const [email_id,setEmail] = useState("");
+  const [password,setPassword] = useState("")
+
+  const handleSubmit = async()=>{
+    const payload = {
+      email_id: email_id,
+      password: password,
+    };
+
+    const data = await loginUser(payload);
+    if (data.length > 0) {
+      sendNotification("success", "Successfully Logged in!");
+      router.push("/");
+    } else {
+      sendNotification("error", "Invalid Username or password");
+    }
+  }
 
   return (
     <VStack height={"100vh"} alignItems={"center"} justifyContent={"center"}>
@@ -8,10 +32,10 @@ const Login = () => {
       <Text fontSize='3xl'>Login here</Text>
       <FormControl>
         <FormLabel >Email address</FormLabel>
-        <Input marginBottom={'1rem'} type="email" />
+        <Input marginBottom={'1rem'} type="email" onChange={(e)=>{setEmail(e.target.value)}}/>
         <FormLabel >Password</FormLabel>
-        <Input marginBottom={'1rem'} type="password" />
-        <Button width={"100%"}marginBottom={'1rem'} colorScheme="teal" size="lg">
+        <Input marginBottom={'1rem'} type="password" onChange={(e)=>{setPassword(e.target.value)}}/>
+        <Button width={"100%"}marginBottom={'1rem'} colorScheme="teal" size="lg" onClick={handleSubmit}>
           Login
         </Button>
         Don't have an account?
