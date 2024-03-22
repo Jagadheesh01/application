@@ -19,8 +19,11 @@ const Login = () => {
 
     const data = await loginUser(payload);
     if (data.length > 0) {
+      router.push("/dashboard");
       sendNotification("success", "Successfully Logged in!");
-      router.push("/");
+     
+
+
     } else {
       sendNotification("error", "Invalid Username or password");
     }
@@ -32,9 +35,9 @@ const Login = () => {
       <Text fontSize='3xl'>Login here</Text>
       <FormControl>
         <FormLabel >Email address</FormLabel>
-        <Input marginBottom={'1rem'} type="email" onChange={(e)=>{setEmail(e.target.value)}}/>
+        <Input marginBottom={'1rem'} type="email" placeholder='Enter your mail id' onChange={(e)=>{setEmail(e.target.value)}}/>
         <FormLabel >Password</FormLabel>
-        <Input marginBottom={'1rem'} type="password" onChange={(e)=>{setPassword(e.target.value)}}/>
+        <Input marginBottom={'1rem'} type="password" placeholder='Enter password' onChange={(e)=>{setPassword(e.target.value)}}/>
         <Button width={"100%"}marginBottom={'1rem'} colorScheme="teal" size="lg" onClick={handleSubmit}>
           Login
         </Button>

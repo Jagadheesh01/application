@@ -1,10 +1,10 @@
-import { Dashboard } from "@/screens";
+import { Dashboard, Login } from "@/screens";
 
 
 export default function Home() {
   return (
     <>
-    <Dashboard />
+    <Login />
     </>
   );
 }

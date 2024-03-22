@@ -26,7 +26,7 @@ const Signup = () => {
     
     if(data.length > 0){
       sendNotification("success", "Successfully Registered!");
-      router.push('/')
+      router.push('/login')
     } else {
       sendNotification("error", "Something went wrong!");
     }
@@ -39,11 +39,11 @@ const Signup = () => {
           <FormLabel id='first_name' >First Name</FormLabel>
           <Input onChange={(e)=>setFirstName(e.target.value)} required placeholder='Enter First Name'/>
           <FormLabel>Last Name</FormLabel>
-          <Input  onChange={(e)=>setLastName(e.target.value)}/>
+          <Input  onChange={(e)=>setLastName(e.target.value)} placeholder='Enter Last Name' />
           <FormLabel>Email address</FormLabel>
-          <Input onChange={(e)=>setEmail(e.target.value)} />
+          <Input onChange={(e)=>setEmail(e.target.value)} placeholder='Enter valid Mail id' />
           <FormLabel >Password</FormLabel>
-          <Input  marginBottom={'1rem'} onChange={(e)=>setPass(e.target.value)}/>
+          <Input  marginBottom={'1rem'} onChange={(e)=>setPass(e.target.value)} placeholder='Enter your password'/>
           <Button marginBottom={'1rem'} width={"100%"} colorScheme="teal" size="lg" onClick={handleSubmit}>Signup</Button>
             Already have an account? <Link href='/login' color={"teal"} marginLeft={"10px"}>
               Click here
