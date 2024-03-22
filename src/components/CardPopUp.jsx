@@ -16,7 +16,7 @@ import {
 } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 
-const CardPopUp = ({setOpen,edit,setedit}) => {
+const CardPopUp = ({setOpen,edit,setedit, setBlogData}) => {
 
 const[title,setTitle] = useState("");
 const[description,setDescription] = useState("");
@@ -53,6 +53,7 @@ const handleSubmit = async()=>{
   if(data.length > 0){
     setOpen(false)
     sendNotification('success', 'Successfully uploaded!')
+    setBlogData((prev)=>([...prev, payload]))
   } else {
     sendNotification('error', 'Something went wrong!')
   }

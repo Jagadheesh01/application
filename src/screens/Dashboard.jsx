@@ -50,7 +50,7 @@ const Dashboard = () => {
   return (
     <>
 
-        {open && <CardPopUp setOpen={setOpen} edit={editBlogData} setedit={setEditBlogData} />}
+        {open && <CardPopUp setOpen={setOpen} edit={editBlogData} setedit={setEditBlogData} setBlogData={setBlogData} />}
 
       <Grid
         templateAreas={`"nav main"
