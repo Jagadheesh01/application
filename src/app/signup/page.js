@@ -1,6 +1,6 @@
 'use client'
 
-import { Signup } from '@/screens'
+import { Signup } from '../../screens'
 
 const SignupPage = () => {
   return (

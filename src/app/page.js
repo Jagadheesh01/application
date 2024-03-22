@@ -1,4 +1,4 @@
-import { Dashboard, Login } from "@/screens";
+import { Dashboard, Login } from "../screens";
 
 
 export default function Home() {

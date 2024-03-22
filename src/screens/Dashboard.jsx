@@ -1,5 +1,5 @@
 "use client";
-import CardPopUp from "@/components/CardPopUp";
+import CardPopUp from "../components/CardPopUp";
 import {
   Avatar,
   AvatarGroup,
@@ -15,8 +15,8 @@ import {
   Button
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
-import BlogCard from "@/components/Blogcard";
-import { deleteBlogs, readAllBlogs } from "@/services";
+import BlogCard from "../components/Blogcard";
+import { deleteBlogs, readAllBlogs } from "../services";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import { useRouter } from 'next/navigation';
 import { sendNotification } from "@/utils/notification";

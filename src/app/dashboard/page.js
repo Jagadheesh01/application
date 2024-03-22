@@ -1,5 +1,5 @@
 'use client'
-import { Dashboard } from '@/screens'
+import { Dashboard } from '../../screens'
 import React from 'react'
 
 const dashBoardPage = () => {

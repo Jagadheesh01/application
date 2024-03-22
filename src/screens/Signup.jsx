@@ -1,5 +1,5 @@
 'use client'
-import { signUpUser } from '@/services';
+import { signUpUser } from '../services';
 import { Card, FormControl, Text, FormLabel, Button, VStack, Input, Link } from '@chakra-ui/react';
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react'

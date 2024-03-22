@@ -1,5 +1,5 @@
 "use client";
-import { deleteBlogs } from "@/services";
+import { deleteBlogs } from "../services";
 import { DeleteIcon, EditIcon } from "@chakra-ui/icons";
 import { Card, CardBody, CardFooter, CardHeader, Heading, Image, Input, Stack, Text, VStack } from "@chakra-ui/react";
 import React from "react";

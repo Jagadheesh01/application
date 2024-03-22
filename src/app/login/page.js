@@ -1,5 +1,5 @@
 'use client'
-import { Login } from "@/screens"
+import { Login } from "../../screens"
 
 const LoginPage = () => {
     return <><Login /></>

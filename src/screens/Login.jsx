@@ -1,5 +1,5 @@
 'use client'
-import { loginUser } from '@/services';
+import { loginUser } from '../services';
 import { sendNotification } from '@/utils/notification';
 import { Button, Card, FormControl, FormLabel, Input, Text, VStack ,Link} from '@chakra-ui/react';
 import { useRouter } from 'next/navigation';

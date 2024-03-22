@@ -1,5 +1,5 @@
 "use client";
-import { createBlog, updateBlogs } from "@/services";
+import { createBlog, updateBlogs } from "../services";
 import { sendNotification } from "@/utils/notification";
 import {
   Button,
