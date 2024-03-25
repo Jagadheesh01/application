@@ -1,5 +1,5 @@
 "use client";
-import CardPopUp from "../components/CardPopUp";
+
 import {
   Avatar,
   AvatarGroup,
@@ -15,11 +15,11 @@ import {
   Button
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
-import { card } from "@/components/Blogcard";
 import { deleteBlogs, readAllBlogs } from "../services";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import { useRouter } from 'next/navigation';
 import { sendNotification } from "@/utils/notification";
+import { BlogCard, CardPopUp } from "@/components";
 
 
 const Dashboard = () => {
@@ -71,7 +71,7 @@ const Dashboard = () => {
         </GridItem>
         <GridItem pl="2" area={"main"} p={10} >
           {blogData?.map((e)=>{
-            return   <card  key={e.id} title={e.title}  description={e.description} id={e.id} deleteItem={handleDelete} setOpen={setOpen} edit={setEditBlogData}/>
+            return   <BlogCard  key={e.id} title={e.title}  description={e.description} id={e.id} deleteItem={handleDelete} setOpen={setOpen} edit={setEditBlogData}/>
           })}
         </GridItem>
       </Grid>

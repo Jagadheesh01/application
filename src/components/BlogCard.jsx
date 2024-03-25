@@ -4,7 +4,7 @@ import { DeleteIcon, EditIcon } from "@chakra-ui/icons";
 import { Card, CardBody, CardFooter, CardHeader, Heading, Image, Input, Stack, Text, VStack } from "@chakra-ui/react";
 import React from "react";
 
-const card = ({title,description,id, deleteItem,setOpen,edit}) => {
+const Blogcard = ({title,description,id, deleteItem,setOpen,edit}) => {
   const handleUpdate = ()=>{
     setOpen(true);
     edit({id:id,description:description,title:title});
@@ -42,4 +42,4 @@ const card = ({title,description,id, deleteItem,setOpen,edit}) => {
   );
 }
 
-export default card
+export default Blogcard
